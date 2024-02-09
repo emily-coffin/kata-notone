@@ -1,3 +1,4 @@
+from time import sleep
 from rich import print
 
 from notone import signals
@@ -39,6 +40,7 @@ def handle_roll_succeeded(game: GameState, d1: int, d2: int):
 
 @signals.turn_ended.connect
 def handle_turn_ended(game: GameState, player: Player):
+    sleep(1)
     echo(f"    TOTAL SCORE: {game.scores[game.active]}")
 
 
