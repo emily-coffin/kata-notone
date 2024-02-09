@@ -8,5 +8,6 @@ from notone.types import Player
 def load() -> list[Player]:
     return [
         add("notone.players.aggro_aiden"),
-        add("notone.players.cautious_carter"),
+        # add("notone.players.cautious_carter"),
+        add("notone.players.nadire_beatrycze"),
     ]
