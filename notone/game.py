@@ -173,6 +173,8 @@ def play(players: list[Player], rounds=10) -> GameState:
     state = GameState()
     signals.game_started.send(state)
 
+    print(f"{players[0].name().upper()} vs {players[1].name().upper()}")
+
     for round in range(1, rounds + 1):
         state = start_round(state, round)
         signals.round_started.send(state, round=round)
