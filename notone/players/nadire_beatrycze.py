@@ -31,4 +31,6 @@ def victory_cry() -> str:
 
 
 def roll_again(state: GameState) -> bool:
-    return state.turn_score < 16
+    # return state.turn_score < 16
+
+    return state.turn_rolls < 5 and state.turn_score < 16
