@@ -1,4 +1,4 @@
-"""Nadire Beatrycze will roll until a score of 16"""
+"""Nadire Beatrycze does not roll more than 6 times and a score no more than 16"""
 
 from random import choice
 from notone.types import GameState
@@ -31,6 +31,4 @@ def victory_cry() -> str:
 
 
 def roll_again(state: GameState) -> bool:
-    # return state.turn_score < 16
-
-    return state.turn_rolls < 5 and state.turn_score < 16
+    return state.turn_rolls < 6 and state.turn_score < 16
